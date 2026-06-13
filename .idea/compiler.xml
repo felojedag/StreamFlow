@@ -18,6 +18,9 @@
         <module name="streamflow-servicio-suscripciones" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="streamflow" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

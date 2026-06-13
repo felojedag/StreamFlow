@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Spring Boot base -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.3.0</version>
+		<relativePath/>
 	</parent>
+
+	<!-- Datos del proyecto -->
 	<groupId>com.duoc</groupId>
 	<artifactId>streamflow-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
-		<java.version>21</java.version>
-		<spring-cloud.version>2025.1.2</spring-cloud.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway-server-webmvc</artifactId>
-		</dependency>
+	<name>streamflow-gateway</name>
+	<description>API Gateway del Sistema</description>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+	<!-- Versiones -->
+	<properties>
+		<java.version>17</java.version>
+		<spring-cloud.version>2023.0.2</spring-cloud.version>
+	</properties>
+
+	<!-- Manejo de versiones Spring Cloud -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -54,6 +40,37 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<!-- Dependencias -->
+	<dependencies>
+
+		<!-- Gateway (reactivo - correcto) -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+		</dependency>
+
+		<!-- WebFlux obligatorio para Gateway -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
+		<!-- Actuator (opcional pero recomendado para monitoreo) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<!-- Build -->
 	<build>
 		<plugins>
 			<plugin>

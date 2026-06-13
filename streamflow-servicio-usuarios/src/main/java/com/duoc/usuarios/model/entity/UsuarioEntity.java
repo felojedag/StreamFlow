@@ -1,9 +1,11 @@
 package com.duoc.usuarios.model.entity;
+
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
 public class UsuarioEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -12,7 +14,10 @@ public class UsuarioEntity {
     private String nombre;
 
     @Column(unique = true, nullable = false)
-    private String email;
+    private String correo;
+
+    @Column(nullable = false)
+    private String contrasena;
 
     public UsuarioEntity() {}
 
@@ -22,6 +27,9 @@ public class UsuarioEntity {
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getCorreo() { return correo; }
+    public void setCorreo(String correo) { this.correo = correo; }
+
+    public String getContrasena() { return contrasena; }
+    public void setContrasena(String contrasena) { this.contrasena = contrasena; }
 }
