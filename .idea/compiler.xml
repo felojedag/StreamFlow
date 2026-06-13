@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="streamflow-servicio-historial" />
+        <module name="streamflow-gateway" />
+        <module name="streamflow-servicio-pagos" />
+        <module name="streamflow-servicio-reviews" />
+        <module name="streamflow-servicio-favoritos" />
+        <module name="streamflow-servicio-catalogo" />
+        <module name="streamflow-servicio-notificaciones" />
+        <module name="streamflow-servicio-auth" />
+        <module name="streamflow-servicio-usuarios" />
+        <module name="streamflow-servicio-suscripciones" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="streamflow-gateway" options="-parameters" />
+      <module name="streamflow-servicio-auth" options="-parameters" />
+      <module name="streamflow-servicio-catalogo" options="-parameters" />
+      <module name="streamflow-servicio-favoritos" options="-parameters" />
+      <module name="streamflow-servicio-historial" options="-parameters" />
+      <module name="streamflow-servicio-notificaciones" options="-parameters" />
+      <module name="streamflow-servicio-pagos" options="-parameters" />
+      <module name="streamflow-servicio-reviews" options="-parameters" />
+      <module name="streamflow-servicio-suscripciones" options="-parameters" />
+      <module name="streamflow-servicio-usuarios" options="-parameters" />
+    </option>
+  </component>
+</project>

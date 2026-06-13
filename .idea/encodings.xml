@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/streamflow-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-catalogo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-favoritos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-historial/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-notificaciones/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-pagos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-reviews/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-suscripciones/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/streamflow-servicio-usuarios/src/main/java" charset="UTF-8" />
+  </component>
+</project>
