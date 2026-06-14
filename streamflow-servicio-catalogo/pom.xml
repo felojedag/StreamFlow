@@ -13,7 +13,7 @@
 	<artifactId>streamflow-servicio-catalogo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>streamflow-servicio-catalogo</name>
-	<description>Servicio de Catalogo</description>
+	<description>Servicio de catalogo</description>
 	<url/>
 	<licenses>
 		<license/>
