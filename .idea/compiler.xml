@@ -20,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="streamflow" target="21" />
+      <module name="streamflow-servicio-favoritos (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +29,7 @@
       <module name="streamflow-servicio-auth" options="-parameters" />
       <module name="streamflow-servicio-catalogo" options="-parameters" />
       <module name="streamflow-servicio-favoritos" options="-parameters" />
+      <module name="streamflow-servicio-favoritos (1)" options="-parameters" />
       <module name="streamflow-servicio-historial" options="-parameters" />
       <module name="streamflow-servicio-notificaciones" options="-parameters" />
       <module name="streamflow-servicio-pagos" options="-parameters" />
