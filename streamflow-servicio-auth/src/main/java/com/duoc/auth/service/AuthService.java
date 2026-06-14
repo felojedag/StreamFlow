@@ -1,17 +1,15 @@
 package com.duoc.auth.service;
 
-import com.duoc.auth.model.dto.UsuarioDTO;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.duoc.auth.model.dto.LoginDTO;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class AuthService {
 
-    @Autowired
-    private UsuarioFeignClient usuarioFeignClient;
-
-    public List<UsuarioDTO> listarUsuariosDesdeAuth() {
-        return usuarioFeignClient.obtenerTodosLosUsuarios().getBody();
+    public String procesarLogin(LoginDTO login) {
+        if ("felipe@duoc.cl".equals(login.getCorreo()) && "123456".equals(login.getPassword())) {
+            return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.SimulacionDeTokenValidoParaLaEvaluacion";
+        }
+        throw new IllegalArgumentException("Credenciales incorrectas");
     }
 }

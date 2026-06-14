@@ -29,4 +29,10 @@ public class UsuarioController {
         List<UsuarioDTO> usuarios = usuarioService.listarTodos();
         return ResponseEntity.ok(usuarios);
     }
+
+    @GetMapping("/{id}/existe")
+    public ResponseEntity<Boolean> verificarExistencia(@PathVariable Long id) {
+        boolean existe = usuarioService.existePorId(id);
+        return ResponseEntity.ok(existe);
+    }
 }

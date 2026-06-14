@@ -1,0 +1,14 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: servicio-reviews
+  datasource:
+    url: jdbc:h2:mem:reviewsdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update

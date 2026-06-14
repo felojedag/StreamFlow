@@ -16,7 +16,7 @@ public class UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     public UsuarioDTO crearUsuario(UsuarioEntity usuario) {
-        if (usuarioRepository.findByCorreo(usuario.getCorreo()).isPresent()) {
+        if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent()) {
             throw new IllegalArgumentException("El correo ya se encuentra registrado");
         }
         UsuarioEntity guardado = usuarioRepository.save(usuario);
@@ -33,11 +33,15 @@ public class UsuarioService {
         return dtos;
     }
 
+    public boolean existePorId(Long id) {
+        return usuarioRepository.existsById(id);
+    }
+
     private UsuarioDTO convertToDTO(UsuarioEntity entity) {
         UsuarioDTO dto = new UsuarioDTO();
         dto.setId(entity.getId());
         dto.setNombre(entity.getNombre());
-        dto.setCorreo(entity.getCorreo());
+        dto.setEmail(entity.getEmail());
         return dto;
     }
 }
