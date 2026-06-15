@@ -6,11 +6,11 @@ spring:
     gateway:
       routes:
         - id: servicio-usuarios
-          uri: ${URL_USUARIOS:http://localhost:8081}
+          uri: ${URL_USUARIOS}
           predicates:
             - Path=/api/usuarios/**
 
         - id: servicio-suscripciones
-          uri: ${URL_SUSCRIPCIONES:http://localhost:8082}
+          uri: ${URL_SUSCRIPCIONES}
           predicates:
             - Path=/api/suscripciones/**
