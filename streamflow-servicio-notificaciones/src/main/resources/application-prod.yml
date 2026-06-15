@@ -1,5 +1,15 @@
 server:
   port: ${PORT:8080}
+
 spring:
   application:
     name: servicio-notificaciones
+  datasource:
+    url: jdbc:h2:mem:notificaciones_prod_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
